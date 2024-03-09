@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../modules/kernel/linux-zen.nix
     ../modules/lanzaboote
+    ../modules/shell/fish.nix
 
     ../modules/bluetooth
     ../modules/locale
@@ -17,7 +18,6 @@
     ../modules/sudo-rs
     ../modules/tailscale
     ../modules/tpm2
-    ../modules/user
 
     ../modules/unfree/discord.nix
   ];
