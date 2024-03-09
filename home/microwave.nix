@@ -21,7 +21,6 @@
     ./modules/tealdeer
     ./modules/thefuck
     ./modules/ungoogled-chromium
-    ./modules/zsh
   ];
 
   # This value determines the Home Manager release that your

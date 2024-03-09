@@ -18,7 +18,6 @@
     };
 
     settings = {
-      shell = "${pkgs.fish}/bin/fish";
       remember_window_size = false;
       initial_window_width = "128c";
       initial_window_height = "38c";

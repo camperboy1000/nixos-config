@@ -5,9 +5,8 @@
     isNormalUser = true;
     description = "Jacob Highfield";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
   };
 
-  programs.zsh.enable = true;
-  environment.pathsToLink = [ "/share/zsh" ];
+  programs.fish.enable = true;
 }
