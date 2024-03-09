@@ -5,6 +5,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-hardware.url = "github:NixOS/nixos-hardware";
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.3.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +34,8 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-hardware, home-manager, ... }:
+  outputs =
+    inputs@{ self, nixpkgs, nix-hardware, lanzaboote, home-manager, ... }:
     let
       username = "camperboy1000";
 
@@ -52,6 +58,7 @@
             nix-hardware.nixosModules.common-cpu-amd
             nix-hardware.nixosModules.common-cpu-amd-pstate
             nix-hardware.nixosModules.common-gpu-amd
+            lanzaboote.nixosModules.lanzaboote
             ./hosts/microwave
 
             home-manager.nixosModules.home-manager

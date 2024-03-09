@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../modules/kernel/linux-zen.nix
+    ../modules/lanzaboote
 
     ../modules/bluetooth
     ../modules/locale
@@ -14,7 +15,6 @@
     ../modules/smartcards
     ../modules/smartd
     ../modules/sudo-rs
-    ../modules/systemd-boot
     ../modules/tailscale
     ../modules/tpm2
     ../modules/user
