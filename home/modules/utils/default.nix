@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.environment = with pkgs; [
+  home.packages = with pkgs; [
     coreutils
     moreutils
 

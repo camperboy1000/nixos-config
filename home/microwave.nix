@@ -16,6 +16,7 @@
     ./modules/kitty
     ./modules/librewolf
     ./modules/lsd
+    ./modules/mpv
     ./modules/nixvim
     ./modules/rclone
     ./modules/starship
@@ -26,7 +27,7 @@
     ./modules/utils
   ];
 
-  home.packages = with pkgs; [ nixfmt signal-desktop virt-manager ];
+  home.packages = with pkgs; [ libreoffice-qt nixfmt signal-desktop virt-manager ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
