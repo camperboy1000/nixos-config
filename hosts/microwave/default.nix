@@ -6,6 +6,7 @@
     ../modules/shell/fish.nix
 
     ../modules/bluetooth
+    ../modules/fprintd
     ../modules/locale
     ../modules/networkmanager
     ../modules/nix
@@ -15,7 +16,7 @@
     ../modules/plymouth
     ../modules/smartcards
     ../modules/smartd
-    ../modules/sudo-rs
+    ../modules/sudo
     ../modules/tailscale
     ../modules/tpm2
 

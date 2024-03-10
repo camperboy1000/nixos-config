@@ -5,6 +5,6 @@
     execWheelOnly = true;
     wheelNeedsPassword = true;
 
-    defaultOptions = [ "insults" ];
+    extraConfig = "Defaults insults";
   };
 }
