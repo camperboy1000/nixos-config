@@ -23,8 +23,12 @@
     ../modules/unfree/discord.nix
   ];
 
-  networking.hostName = "microwave";
   time.timeZone = "America/New_York";
+
+  networking = {
+    hostName = "microwave";
+    nameservers = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ]; # Quad9 DNS
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
