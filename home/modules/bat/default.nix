@@ -5,13 +5,13 @@
     enable = true;
 
     themes = {
-      "catppuccin-${lib.strings.toLower catppuccin.flavor}" = {
+      "Catppuccin ${catppuccin.flavor}" = {
         src = catppuccin.bat;
-        file = "Catppuccin-${lib.strings.toLower catppuccin.flavor}.tmTheme";
+        file = "themes/Catppuccin ${catppuccin.flavor}.tmTheme";
       };
     };
 
-    config = { theme = "catppuccin-${lib.strings.toLower catppuccin.flavor}"; };
+    config = { theme = "Catppuccin ${catppuccin.flavor}"; };
   };
 
   home.shellAliases = { "cat" = "bat"; };
