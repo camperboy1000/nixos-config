@@ -25,9 +25,15 @@
     ./modules/thefuck
     ./modules/ungoogled-chromium
     ./modules/utils
+    ./modules/vscodium
   ];
 
-  home.packages = with pkgs; [ libreoffice-qt nixfmt signal-desktop virt-manager ];
+  home.packages = with pkgs; [
+    libreoffice-qt
+    nixfmt
+    signal-desktop
+    virt-manager
+  ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
