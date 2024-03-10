@@ -7,6 +7,7 @@
 
     ../modules/bluetooth
     ../modules/fprintd
+    ../modules/libvirt
     ../modules/locale
     ../modules/networkmanager
     ../modules/nix
@@ -27,7 +28,8 @@
 
   networking = {
     hostName = "microwave";
-    nameservers = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ]; # Quad9 DNS
+    nameservers =
+      [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ]; # Quad9 DNS
   };
 
   # This value determines the NixOS release from which the default
