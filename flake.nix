@@ -28,6 +28,11 @@
       flake = false;
     };
 
+    catppuccin-btop = {
+      url = "github:catppuccin/btop";
+      flake = false;
+    };
+
     catppuccin-starship = {
       url = "github:catppuccin/starship";
       flake = false;
@@ -44,6 +49,7 @@
         color = "Mauve";
 
         bat = inputs.catppuccin-bat;
+        btop = inputs.catppuccin-btop;
         starship = inputs.catppuccin-starship;
       };
     in {

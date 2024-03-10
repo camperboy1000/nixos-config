@@ -1,4 +1,6 @@
 {
+  imports = [ ./catppuccin.nix ];
+
   programs.btop = {
     enable = true;
 
