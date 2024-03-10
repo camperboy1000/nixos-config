@@ -8,11 +8,8 @@
       variant = "";
     };
 
-    desktopManager.plasma5.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "plasmawayland";
-    };
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
   };
 
   programs.dconf.enable = true;
