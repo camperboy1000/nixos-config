@@ -18,6 +18,7 @@
     ../modules/smartcards
     ../modules/smartd
     ../modules/sudo
+    ../modules/systemd-resolved
     ../modules/tailscale
     ../modules/tpm2
 
@@ -28,8 +29,13 @@
 
   networking = {
     hostName = "microwave";
-    nameservers =
-      [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ]; # Quad9 DNS
+    nameservers = [
+      # Quad9
+      "2620:fe::fe#dns.quad9.net"
+      "2620:fe::9#dns.quad9.net"
+      "9.9.9.9#dns.quad9.net"
+      "149.112.112.112#dns.quad9.net"
+    ];
   };
 
   # This value determines the NixOS release from which the default
