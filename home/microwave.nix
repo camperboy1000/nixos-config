@@ -10,6 +10,7 @@
     ./modules/discord
     ./modules/fish
     ./modules/fonts
+    ./modules/fzf
     ./modules/git
     ./modules/gnupg
     ./modules/kitty
