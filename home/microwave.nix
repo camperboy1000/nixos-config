@@ -1,4 +1,4 @@
-{ username, ... }:
+{ pkgs, username, ... }:
 
 {
   home.username = "${username}";
@@ -6,6 +6,7 @@
 
   imports = [
     ./modules/bat
+    ./modules/btop
     ./modules/discord
     ./modules/fish
     ./modules/fonts
@@ -22,6 +23,8 @@
     ./modules/thefuck
     ./modules/ungoogled-chromium
   ];
+
+  home.packages = with pkgs; [ nixfmt ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
