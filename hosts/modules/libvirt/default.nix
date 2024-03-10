@@ -1,4 +1,12 @@
+{ pkgs, ... }:
+
 {
+  environment.systemPackages = with pkgs; [
+    virtiofsd
+    virtio-win
+    libguestfs-with-appliance
+  ];
+
   virtualisation.libvirtd = {
     enable = true;
     onBoot = "ignore";
