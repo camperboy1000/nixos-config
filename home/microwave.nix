@@ -23,6 +23,7 @@
     ./modules/tealdeer
     ./modules/thefuck
     ./modules/ungoogled-chromium
+    ./modules/utils
   ];
 
   home.packages = with pkgs; [ nixfmt signal-desktop virt-manager ];
