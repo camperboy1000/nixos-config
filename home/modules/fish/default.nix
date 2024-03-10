@@ -1,17 +1,10 @@
-{ pkgs, ... }:
-
 {
-  home.packages = with pkgs; [ fastfetch ];
+  imports = [ ./fastfetch.nix ];
 
   programs = {
-    # Needed to source /etc/bashrc
+    # Bash is needed to source /etc/bashrc
     bash.enable = true;
-
-    fish = {
-      enable = true;
-      functions = { fish_greeting = "${pkgs.fastfetch}/bin/fastfetch"; };
-    };
-
+    fish.enable = true;
     command-not-found.enable = true;
   };
 }
