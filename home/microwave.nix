@@ -25,7 +25,7 @@
     ./modules/ungoogled-chromium
   ];
 
-  home.packages = with pkgs; [ nixfmt virt-manager ];
+  home.packages = with pkgs; [ nixfmt signal-desktop virt-manager ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
