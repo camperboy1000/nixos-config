@@ -7,7 +7,7 @@
   users.users."${username}" = {
     isNormalUser = true;
     description = "Jacob Highfield";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
   };
 
   programs.bash.interactiveShellInit = ''
