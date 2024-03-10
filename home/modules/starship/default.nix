@@ -8,8 +8,6 @@
     enableFishIntegration = true;
     enableZshIntegration = true;
 
-    enableTransience = true;
-
     settings = builtins.fromTOML (builtins.readFile
       "${catppuccin.starship}/palettes/${
         lib.strings.toLower catppuccin.flavor
