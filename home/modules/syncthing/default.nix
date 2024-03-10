@@ -1,7 +1,12 @@
+{ pkgs, ... }:
+
 {
+  home.packages = with pkgs; [ syncthingtray ];
+
   services.syncthing = {
     enable = true;
 
-    tray = { enable = true; };
+    # Not working on Plasma ATM
+    # tray = { enable = true; };
   };
 }
