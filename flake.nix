@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
     nix-hardware.url = "github:NixOS/nixos-hardware";
 
     lanzaboote = {
@@ -39,8 +40,8 @@
     };
   };
 
-  outputs =
-    inputs@{ self, nixpkgs, nix-hardware, lanzaboote, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-hardware, lanzaboote
+    , home-manager, ... }:
     let
       username = "camperboy1000";
 
@@ -76,6 +77,13 @@
               };
             }
           ];
+        };
+
+        "jellyfish" = nixpkgs-stable.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit username; };
+
+          modules = [ ./hosts/jellyfish ];
         };
       };
     };
