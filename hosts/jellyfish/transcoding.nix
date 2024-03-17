@@ -3,7 +3,7 @@
 {
   hardware.opengl = {
     enable = true;
-    enableDriSupport = true;
+    driSupport = true;
 
     extraPackages = with pkgs; [
       intel-media-driver
