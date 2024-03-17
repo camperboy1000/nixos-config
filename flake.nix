@@ -83,7 +83,11 @@
           system = "x86_64-linux";
           specialArgs = { inherit username; };
 
-          modules = [ ./hosts/jellyfish ];
+          modules = [
+            nix-hardware.nixosModules.common-cpu-intel
+            nix-hardware.nixosModules.common-gpu-intel
+            ./hosts/jellyfish
+          ];
         };
       };
     };
