@@ -3,6 +3,7 @@
 {
   imports = [
     (modulesPath + "/virtualisation/proxmox-lxc.nix")
+    ./jellyfin.nix
 
     ../modules/nix
     ../modules/pkgs
@@ -15,6 +16,7 @@
 
   networking = {
     hostName = "jellyfish";
+
     nameservers = [
       # Quad9
       "2620:fe::fe#dns.quad9.net"
