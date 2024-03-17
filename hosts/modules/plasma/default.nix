@@ -1,15 +1,9 @@
 {
-  services.xserver = {
+  services.desktopManager.plasma6.enable = true;
+
+  services.xserver.displayManager.sddm = {
     enable = true;
-    libinput.enable = true;
-
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
-
-    desktopManager.plasma6.enable = true;
-    displayManager.sddm.enable = true;
+    wayland.enable = true;
   };
 
   programs.dconf.enable = true;
