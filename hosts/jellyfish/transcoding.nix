@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  # why.....
+  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };
+
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -10,7 +13,6 @@
       intel-vaapi-driver
       vaapiVdpau
       libvdpau-va-gl
-      intel-ocl
       intel-compute-runtime
     ];
   };
