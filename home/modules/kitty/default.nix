@@ -36,4 +36,6 @@
         "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
     };
   };
+
+  home.shellAliases = { "ssh" = "kitten ssh"; };
 }
