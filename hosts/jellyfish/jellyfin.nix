@@ -1,7 +1,12 @@
-{config, ...}:
+{ config, ... }:
 
 {
   services.jellyfin.enable = true;
+
+  users.groups = {
+    video.gid = 26;
+    render.gid = 303;
+  };
 
   services.caddy = {
     enable = true;
