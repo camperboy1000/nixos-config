@@ -1,8 +1,10 @@
+{ pkgs, ... }:
+
 {
   services.gpg-agent = {
     enable = true;
     enableScDaemon = true;
-    pinentryFlavor = "curses";
+    pinentryPackage = pkgs.pinentry-qt;
 
     enableBashIntegration = true;
     enableFishIntegration = true;
