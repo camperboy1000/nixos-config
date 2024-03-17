@@ -5,6 +5,7 @@
     (modulesPath + "/virtualisation/proxmox-lxc.nix")
 
     ../modules/nix
+    ../modules/pkgs
     ../modules/sudo
     ../modules/systemd-resolved
     ../modules/tailscale
@@ -22,8 +23,6 @@
       "149.112.112.112#dns.quad9.net"
     ];
   };
-
-  environment.systemPackages = with pkgs; [ git vim ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
