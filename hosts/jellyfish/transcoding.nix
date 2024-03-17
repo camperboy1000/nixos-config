@@ -3,13 +3,15 @@
 {
   hardware.opengl = {
     enable = true;
+    enableDriSupport = true;
 
     extraPackages = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
-      intel-compute-runtime
       vaapiVdpau
       libvdpau-va-gl
+      intel-ocl
+      intel-compute-runtime
     ];
   };
 
