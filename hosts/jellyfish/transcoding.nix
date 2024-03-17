@@ -2,7 +2,6 @@
 
 {
   hardware.opengl.enable = true;
-  hardware.opencl.extraPackages = with pkgs; [ intel-media-driver intel-ocl ];
 
   users.groups = {
     video = {
