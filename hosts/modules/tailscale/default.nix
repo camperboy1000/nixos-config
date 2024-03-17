@@ -6,6 +6,5 @@
     extraUpFlags = [ "--operator=${username}" ];
 
     openFirewall = true;
-    useRoutingFeatures = "client";
   };
 }

@@ -19,7 +19,7 @@
     ../modules/smartd
     ../modules/sudo
     ../modules/systemd-resolved
-    ../modules/tailscale
+    ../modules/tailscale/client.nix
     ../modules/tpm2
 
     ../modules/unfree/discord.nix
