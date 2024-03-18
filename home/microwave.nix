@@ -29,10 +29,13 @@
   ];
 
   home.packages = with pkgs; [
-    libreoffice-qt
     nixfmt
+
+    libreoffice-qt
     signal-desktop
+    supersonic
     virt-manager
+    virt-viewer
   ];
 
   # This value determines the Home Manager release that your
