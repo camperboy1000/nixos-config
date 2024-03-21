@@ -9,6 +9,7 @@
     ../modules/fprintd
     ../modules/libvirt
     ../modules/locale
+    ../modules/mullvad
     ../modules/networkmanager
     ../modules/nix
     ../modules/pipewire
