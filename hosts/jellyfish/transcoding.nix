@@ -17,14 +17,12 @@
   users.groups = {
     video = {
       gid = 26;
-      members = [ "root"
-      config.services.jellyfin.user ];
+      members = [ "root" config.services.jellyfin.user ];
     };
 
     render = {
       gid = 303;
-      members = [ "root"
-      config.services.jellyfin.user ];
+      members = [ "root" config.services.jellyfin.user ];
     };
   };
 }
