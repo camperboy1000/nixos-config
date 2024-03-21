@@ -1,12 +1,19 @@
 { pkgs, ... }:
 
 {
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-
-    mutableExtensionsDir = false;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
+
+    mutableExtensionsDir = false;
+    extensions = with pkgs.vscode-extensions; [
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+    ];
+
+    userSettings = { };
   };
 }

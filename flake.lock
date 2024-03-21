@@ -71,6 +71,26 @@
         "type": "github"
       }
     },
+    "catppuccin-vscode": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1710544781,
+        "narHash": "sha256-nkxihb3D85k1nZV1CzlB3seMKtTEeKb688sblIGp/Bs=",
+        "owner": "catppuccin",
+        "repo": "vscode",
+        "rev": "d7b96ccac36fd29929bd97bc9357413cc4e0240c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "vscode",
+        "type": "github"
+      }
+    },
     "crane": {
       "inputs": {
         "flake-compat": [
@@ -722,6 +742,7 @@
         "catppuccin-bat": "catppuccin-bat",
         "catppuccin-btop": "catppuccin-btop",
         "catppuccin-starship": "catppuccin-starship",
+        "catppuccin-vscode": "catppuccin-vscode",
         "home-manager": "home-manager",
         "home-manager-stable": "home-manager-stable",
         "lanzaboote": "lanzaboote",

@@ -33,7 +33,7 @@
       url = "github:nix-community/nixvim/nixos-23.11";
       inputs = {
         nixpkgs.follows = "nixpkgs-stable";
-        home-manager.follows = "home-manager-stable";
+        # home-manager.follows = "home-manager-stable";
       };
     };
 
@@ -51,6 +51,11 @@
       url = "github:catppuccin/starship";
       flake = false;
     };
+
+    catppuccin-vscode = {
+      url = "github:catppuccin/vscode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-hardware, lanzaboote
@@ -65,6 +70,7 @@
         bat = inputs.catppuccin-bat;
         btop = inputs.catppuccin-btop;
         starship = inputs.catppuccin-starship;
+        vscode = inputs.catppuccin-vscode;
       };
     in {
       nixosConfigurations = {
