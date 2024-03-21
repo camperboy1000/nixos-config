@@ -16,11 +16,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    home-manager-stable = {
+      url = "github:nix-community/home-manager/release-23.11";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
+      };
+    };
+
+    nixvim-stable = {
+      url = "github:nix-community/nixvim/nixos-23.11";
+      inputs = {
+        nixpkgs.follows = "nixpkgs-stable";
+        home-manager.follows = "home-manager-stable";
       };
     };
 
@@ -41,7 +54,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-hardware, lanzaboote
-    , home-manager, ... }:
+    , home-manager, home-manager-stable, ... }:
     let
       username = "camperboy1000";
 
