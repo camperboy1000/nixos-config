@@ -1,4 +1,4 @@
 {
   services.fprintd.enable = true;
-  security.pam.services.sddm.fprintAuth = false;
+  security.pam.services.login.fprintAuth = false;
 }
