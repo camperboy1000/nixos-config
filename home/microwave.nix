@@ -32,6 +32,7 @@
     nixfmt
 
     libreoffice-qt
+    localsend
     signal-desktop
     supersonic
     virt-manager
