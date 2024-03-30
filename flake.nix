@@ -58,8 +58,16 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-hardware, lanzaboote
-    , home-manager, home-manager-stable, ... }:
+  outputs =
+    inputs@{ self
+    , nixpkgs
+    , nixpkgs-stable
+    , nix-hardware
+    , lanzaboote
+    , home-manager
+    , home-manager-stable
+    , ...
+    }:
     let
       username = "camperboy1000";
 
@@ -72,7 +80,8 @@
         starship = inputs.catppuccin-starship;
         vscode = inputs.catppuccin-vscode;
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         "microwave" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
