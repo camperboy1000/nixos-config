@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./catppuccin.nix ];
+  imports = [ ./catppuccin.nix ./telemetry.nix ];
 
   programs.vscode = {
     enable = true;
