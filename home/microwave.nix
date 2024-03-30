@@ -30,11 +30,13 @@
 
   home.packages = with pkgs; [
     nixfmt
+    nmap
 
     libreoffice-qt
     localsend
     signal-desktop
     supersonic
+    wireshark
     virt-manager
     virt-viewer
   ];
