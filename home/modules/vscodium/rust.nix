@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ rustup ];
+  home.packages = with pkgs; [ rustup gcc ];
 
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
