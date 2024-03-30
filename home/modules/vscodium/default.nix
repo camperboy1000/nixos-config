@@ -1,7 +1,13 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./catppuccin.nix ./telemetry.nix ];
+  imports = [
+    ./catppuccin.nix
+    ./telemetry.nix
+
+    ./nix.nix
+    ./rust.nix
+  ];
 
   programs.vscode = {
     enable = true;
@@ -9,16 +15,8 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
 
-    mutableExtensionsDir = false;
-    extensions = with pkgs.vscode-extensions; [
-      # Nix
-      jnoortheen.nix-ide
-
-      # Rust 🦀
-      rust-lang.rust-analyzer
-      serayuzgur.crates
-      tamasfe.even-better-toml
-    ];
+    # Allow projects to recommend their own extensions
+    mutableExtensionsDir = true;
 
     userSettings = {
       "editor.formatOnSave" = true;
