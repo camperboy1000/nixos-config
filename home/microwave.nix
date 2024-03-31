@@ -7,6 +7,7 @@
   imports = [
     ./modules/bat
     ./modules/btop
+    ./modules/direnv
     ./modules/discord
     ./modules/fish
     ./modules/fonts
@@ -29,7 +30,7 @@
   ];
 
   home.packages = with pkgs; [
-    nixfmt
+    nixpkgs-fmt
     nmap
 
     libreoffice-qt

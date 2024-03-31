@@ -9,6 +9,8 @@
     ./rust.nix
   ];
 
+  home.shellAliases = { "code" = "codium"; };
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -21,7 +23,7 @@
     userSettings = {
       "editor.formatOnSave" = true;
       "editor.formatOnPaste" = true;
-      "editor.guides.bracketPairs" = "auto";
+      "editor.guides.bracketPairs" = "active";
       "references.preferredLocation" = "view";
       "workbench.startupEditor" = "none";
     };

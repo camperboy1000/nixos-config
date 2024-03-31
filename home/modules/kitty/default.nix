@@ -1,4 +1,4 @@
-{ lib, pkgs, catppuccin, ... }:
+{ pkgs, catppuccin, ... }:
 
 {
   programs.kitty = {
