@@ -21,6 +21,14 @@
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs = {
