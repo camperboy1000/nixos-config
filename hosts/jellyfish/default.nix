@@ -1,4 +1,4 @@
-{ pkgs, modulesPath, ... }:
+{ pkgs, modulesPath, username, ... }:
 
 {
   imports = [
@@ -26,6 +26,8 @@
       "149.112.112.112#dns.quad9.net"
     ];
   };
+
+  users.users."${username}".extraGroups = [ "jellyfin" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
