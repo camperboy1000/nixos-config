@@ -123,6 +123,15 @@
             nix-hardware.nixosModules.common-cpu-intel
             nix-hardware.nixosModules.common-gpu-intel
             ./hosts/jellyfish
+
+            home-manager-stable.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.users."${username}" = import ./home/jellyfish.nix;
+              home-manager.extraSpecialArgs = {
+                inherit inputs username catppuccin;
+              };
+            }
           ];
         };
       };

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -14,9 +14,10 @@
 
     qemu = {
       runAsRoot = false;
-
       ovmf.enable = true;
       swtpm.enable = true;
     };
   };
+
+  users.users."${username}".extraGroups = [ "libvirtd" ];
 }

@@ -4,6 +4,7 @@
   imports = [
     (modulesPath + "/virtualisation/proxmox-lxc.nix")
     ./jellyfin.nix
+    ../modules/shell/fish.nix
 
     ../modules/nix
     ../modules/pkgs
