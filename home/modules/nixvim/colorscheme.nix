@@ -3,6 +3,6 @@
 {
   programs.nixvim.colorschemes.catppuccin = {
     enable = true;
-    flavour = "${lib.strings.toLower catppuccin.flavor}"; # Notice the spelling...
+    settings.flavour = "${lib.strings.toLower catppuccin.flavor}"; # Notice the spelling...
   };
 }
