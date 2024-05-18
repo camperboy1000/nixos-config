@@ -4,12 +4,46 @@
   home.packages = with pkgs; [ fastfetch ];
 
   programs.fish = {
-    functions = { fish_greeting = "${pkgs.fastfetch}/bin/fastfetch"; };
+    functions = {
+      fish_greeting = "${pkgs.fastfetch}/bin/fastfetch";
+    };
   };
 
-  home.file.".config/fastfetch/config.conf".text = ''
-    --percent-type 3
-
-    --structure Title:Separator:OS:Host:Kernel:Uptime:Shell:DE:WM:WMTheme:Theme:Icons:Terminal:CPU:GPU:Memory:Swap:Disk:Battery:PowerAdapter:Break:DateTime:Media:Break:Colors
+  xdg.configFile."fastfetch/config.jsonc".text = ''
+    {
+      "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+      "display": {
+        "percent": {
+          "type": 3
+        }
+      },
+      "modules": [
+        "title",
+        "separator",
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "shell",
+        "de",
+        "wm",
+        "wmtheme",
+        "theme",
+        "icons",
+        "terminal",
+        "cpu",
+        "gpu",
+        "memory",
+        "swap",
+        "disk",
+        "battery",
+        "poweradapter",
+        "break",
+        "datetime",
+        "media",
+        "break",
+        "colors"
+      ]
+    }
   '';
 }
