@@ -74,6 +74,7 @@
     , lanzaboote
     , home-manager
     , home-manager-stable
+    , plasma-manager
     , ...
     }:
     let
@@ -108,6 +109,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.users."${username}" = import ./home/microwave.nix;
+              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               home-manager.extraSpecialArgs = {
                 inherit inputs username catppuccin;
               };

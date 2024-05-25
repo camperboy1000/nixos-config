@@ -19,6 +19,7 @@
     ./modules/lsd
     ./modules/mpv
     ./modules/nixvim
+    ./modules/plasma
     ./modules/rclone
     ./modules/starship
     ./modules/syncthing
