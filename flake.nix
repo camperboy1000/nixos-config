@@ -123,7 +123,6 @@
 
           modules = [
             nix-hardware.nixosModules.common-cpu-intel
-            nix-hardware.nixosModules.common-gpu-intel
             ./hosts/jellyfish
 
             home-manager-stable.nixosModules.home-manager
